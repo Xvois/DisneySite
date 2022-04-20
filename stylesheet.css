@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    background: #000000;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background: #000000;
+    box-shadow: 0 1px 3px;
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    position: fixed;
+    z-index: 11;
+}
+
+.cover{
+    float: right;
+    margin-top: 0;
+    margin-left: -60px;
+    max-width: 70%;
+    height: auto;
+}
+
+.cover:hover{
+    opacity: 80%;
+
+    transition: all ease-in-out 300ms;
+}
+
+
+.cover::after:link{
+    text-decoration: none;
+}
+
+.cover::after:visited{
+    text-decoration: none;
+}
+
+nav{
+    float: none;
+    position: fixed;
+    background-color: black;
+    width: 101%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position: relative;
+}
+
+nav a{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* effect on hover */
+nav a:hover{
+    color: rgb(197, 197, 197);
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    font-size: 20px;    
+    font-weight: bold;
+    color: white;
+}
+
+.lowerImage{
+    /* border: 1px solid red; */
+    position: fixed;
+    width: 100%;
+    bottom: -50;
+    left: 0;
+    opacity: 1;
+    animation: fadein 2s;
+    z-index: -1;
+}
+
+.left{
+    /* border: 1px green solid; */
+    float: left;
+    width: 70%;
+    height: 60%;
+    margin-top: 40px;
+    text-align: center;
+    background-clip: padding-box;
+    z-index: 1;
+}
+
+.left a:link{
+    text-decoration: underline;
+    color: white;
+}
+
+.left a:visited{
+    text-decoration: underline;
+    color: white;
+}
+@keyframes fadeinO {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadein {
+    from { opacity: 0; margin-top: 60px; }
+    to   { opacity: 1; margin-top: 40px; }
+}
+
+@keyframes drawline {
+    from { width: 0; }
+    to   { width: 210px; }
+}
+
+.left h2{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 25px;
+    font-size: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.left h2::before{
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+
+    position: relative;
+    top: -3;
+    width: 70px;
+}
+
+.left h1{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline;
+  position: relative;
+  overflow: hidden;
+  animation: fadein 2s;
+}
+
+.left h1::after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -1px;
+    background: rgb(255, 255, 255);
+    height: 1px;
+    animation: drawline 3s;
+    width: 210px;
+}
+.left p{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: 200;
+    width: 97%;
+    padding-left: 10px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-top: 40px;
+    text-align: left;
+    animation: fadein 2s;
+}
+
+.left p::after{
+    content: "\a";
+    white-space: pre;
+}
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.right{
+    margin-right: 10px;
+    float: right;
+    color: white;
+    width: 27%;
+    height: 90%;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.right ol{
+    margin-top: 10%;
+    display: block;
+    list-style-type: circle;
+    padding-left: -5px;
+    z-index: inherit;
+}
+
+.right li{
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    margin-bottom: 3em;
+    display: none;
+    text-transform: capitalize;
+    z-index: inherit;
+}
+
+
+@keyframes fadeinB {
+    from { opacity: 0; margin-top: 20%; }
+    to   { opacity: 1; margin-top: 10%; }
+}
+
+.summary{
+    margin-top: 10%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.summary p{
+    margin-top: 0px;
+    animation: fadein 2s ease-in-out;
+    margin-top: 40px;
+}
+
+.summary h1{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.bottombar{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    bottom: 0;
+    background-color: white;
+    color: white;
+}
+
+.bottombar a{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    width: 90%;
+    text-align: left;
+    margin-left: 1%;
+    margin-top: 9px;
+    display: block;
+    color: rgb(121, 121, 121);
+}
+
+.bottombar a:hover{
+    color: black;
+}
+

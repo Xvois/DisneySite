@@ -1,0 +1,137 @@
+/* standard css for the page layout */
+body{
+    margin: 0;
+    background: white;
+}
+.logo{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    position: fixed;
+    z-index: 11;
+}
+nav{
+    /* border: 1px black solid; */
+    float: none;
+    position: fixed;
+    background-color: white;
+    width: 101%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    position: relative;
+}
+
+nav a{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* effect on hover */
+nav a:hover{
+    color: black;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+/* end */
+
+
+.datapoint{
+    left: 50%;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%
+}
+
+.mainText{
+    width: 1435px;
+    z-index: 5;
+    padding-top: 20px;
+}
+
+.mainText h1{
+    margin: 50px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.mainText h2{
+    margin-left: 50px;
+    margin-top: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.mainText p{
+    margin: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mainText a:link{
+    text-decoration: underline;
+    color: black;
+}
+
+.mainText a:visited{
+    text-decoration: underline;
+    color: black;
+}
+
+.vl{
+    position: absolute;
+    margin-bottom: 34px;
+    bottom: 0;
+    z-index: -10;
+    border-left: 1px solid black;
+    height: 40px;
+}
+
+.vl h1{
+    position: relative;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    top: 0;
+    margin-top: -7.5%;
+    margin-left: -50%;
+}
